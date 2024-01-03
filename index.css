@@ -1,0 +1,40 @@
+#randbutton img{
+	height: 100%;
+	width: 100%;
+	border: none;
+}
+body{
+	background: #545454;
+}
+#myimage{
+	height: 480px;
+	width: 100%;
+}
+#steps{
+	color: #000;
+}
+h3{
+	margin: 0px;
+}
+b{
+	z-index:2;
+	background:#000;
+	opacity: 0.6;
+	color: white;
+	border-radius:100%;
+	padding:10px;
+	float:left;
+	position: absolute;
+}
+.col-4{
+	height: 33%;
+} 
+#randbutton{
+	
+}
+@media only screen and (max-width: 600px) {
+  #myimage{
+	height: 221px;
+	width: 100%;
+}
+}
