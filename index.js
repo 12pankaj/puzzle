@@ -61,7 +61,7 @@ var images=[ 	[7,5,2,1,8,4,6,3,9],
 			if(btn[y].innerHTML!="<img src=\" \">")
 			{
 				let valid=false;
-			  	moves.innerText="Moves : "+move
+			  	
 				var changeindex = [y + 1, y - 1, y + 3, y - 3];
     for (var i of changeindex) {
       if (i >= 0 && i <= 8 && btn[i].innerHTML == "<img src=\" \">") {
@@ -76,6 +76,7 @@ var images=[ 	[7,5,2,1,8,4,6,3,9],
 
 			click.play();
 				move++;
+			  moves.innerText="Moves : "+move
 		  }
 			
 		}
