@@ -77,7 +77,7 @@ var gameover = false;
 var chanceindex; //array for check around image is blank
 //function call when user click on image
 function selectimg(y) {
-  click.pause();
+  // click.pause();
   if (gameover) return 0; // game over than function return
 
   //check user's moves comeplet
