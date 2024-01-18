@@ -1,0 +1,68 @@
+#randbutton img {
+	height: 100%;
+	width: 100%;
+	border: none;
+}
+
+#myimage{
+	height: auto;
+	width: 100%;
+}
+#imagehint {
+	height: 100%;
+	width: 100%;
+	filter: brightness(110%);
+}
+
+.col-4 {
+	height: 33%;
+}
+
+#steps {
+	color: #000;
+}
+
+h3 {
+	margin: 0px;
+}
+
+b {
+	z-index: 2;
+	background: #000;
+	opacity: 0.6;
+	color: white;
+	border-radius: 100%;
+	padding: 10px;
+	float: left;
+	position: absolute;
+}
+
+@media only screen and (max-width: 600px) {
+	#myimage {
+		height: 221px;
+		width: 100%;
+	}
+}
+
+@font-face {
+	font-family: digital;
+	src: url(asst/digital-7/digital-7.ttf);
+}
+
+#timer {
+	font-family: digital;
+	font-size: 36px;
+}
+
+#timerimage {
+	height: auto;
+	width: auto;
+	mix-blend-mode: lighten;
+	z-index: 1;
+	top: 1px;
+	position: fixed;
+}
+
+.modal-header {
+	text-align: center !important;
+}
