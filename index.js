@@ -1,9 +1,6 @@
 //body load after function call
-function load() {
-  $("#alert").modal("show");
-}
 window.onload = function () {
-  load();
+  $("#alert").modal("show");
 };
 var images = [
   [7, 5, 2, 1, 8, 4, 6, 3, 9], //42 moves
@@ -77,7 +74,6 @@ var gameover = false;
 var chanceindex; //array for check around image is blank
 //function call when user click on image
 function selectimg(y) {
-  // click.pause();
   if (gameover) return 0; // game over than function return
 
   //check user's moves comeplet
@@ -86,7 +82,8 @@ function selectimg(y) {
     confirmMessageHandler("move_complet");
     return;
   }
-  var co = btn[y].innerHTML;
+  
+  var copyimg = btn[y].innerHTML;
   //check image not equal blanck
   if (btn[y].innerHTML != '<img src=" ">') {
     let valid = false;
@@ -99,7 +96,7 @@ function selectimg(y) {
     //Loop will check if the slide next to the image is blank.
     for (var i of chanceindex) {
       if (i >= 0 && i <= 8 && btn[i].innerHTML == '<img src=" ">') {
-        btn[i].innerHTML = co;
+        btn[i].innerHTML = copyimg;
         btn[y].innerHTML = '<img src=" ">';
         valid = true;
         wincheck();
@@ -129,9 +126,9 @@ function wincheck() {
       btn[3].innerHTML == `<b>4</b><img src="im${rand}/4.jpg">` &&
       btn[4].innerHTML == `<b>5</b><img src="im${rand}/5.jpg">`)
   ) {
-    var i = 0;
     timerstop = true;
     win.play();
+    var i = 0;
     while (i != 9) {
       btn[i].classList.add("p-0");
       btn[i].classList.remove("p-2");
@@ -202,7 +199,7 @@ function handleUserConfirmation(res) {
     $("#alert .modal-footer").html(
       "<button class='btn btn-outline-danger' data-bs-dismiss='modal' id='closemodel'> Close </button>"
     );
-    $("#modal-size").removeClass("modal-lg");
+    $("#modal-size").removeClass("modal-xl");
     $("#modal-size").addClass("modal-sm");
     $("#alert").removeClass("bg-dark");
     $("#alert").modal("show");
