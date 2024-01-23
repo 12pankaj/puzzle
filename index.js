@@ -180,7 +180,7 @@ function confirmMessageHandler(mes) {
     case "complet":
        headmessage="Congratulations"
       headcolor="text-success"
-      message = `<h2>Congratulations you win!</h2><p>Puzzle Complete </p><p>Your Total Moves = ${move}</p><q>Do you want to play again?</q> `;
+      message = `<h2>you win!</h2><p>Puzzle Complete </p><p>Your Total Moves = ${move}</p><q>Do you want to play again?</q> `;
       break;
     case "move_complet":
       headmessage="Game Over"
@@ -190,7 +190,7 @@ function confirmMessageHandler(mes) {
     case "timing_complet":
        headcolor="text-danger"
       headmessage="Time Over"
-      message = `<h4>Time Over</h4><p>Better luck next time</p> <q>Do you want to play again?</q> `;
+      message = `<p>Better luck next time</p> <q>Do you want to play again?</q> `;
       break;
   }
   $("#confirm .modal-body").html(message);
