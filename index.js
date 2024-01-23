@@ -172,20 +172,30 @@ function startTimer(seconds) {
 }
 function confirmMessageHandler(mes) {
   let message;
+  let headmessage;
+  let headcolor;
   gameover = true;
   game.pause();
   switch (mes) {
     case "complet":
+       headmessage="Congratulations"
+      headcolor="text-success"
       message = `<h2>Congratulations you win!</h2><p>Puzzle Complete </p><p>Your Total Moves = ${move}</p><q>Do you want to play again?</q> `;
       break;
     case "move_complet":
+      headmessage="Game Over"
+      headcolor="text-danger"
       message = `<p>Game Over as all 50 moves are exhausted</p> <q>Do you want to play again?</q>`;
       break;
     case "timing_complet":
+       headcolor="text-danger"
+      headmessage="Time Over"
       message = `<h4>Time Over</h4><p>Better luck next time</p> <q>Do you want to play again?</q> `;
       break;
   }
   $("#confirm .modal-body").html(message);
+  $("#confirm #confirm-heading").text(headmessage);
+   $("#confirm #confirm-heading").addClass(headcolor);
   $("#confirm").modal("show");
 }
 function handleUserConfirmation(res) {
